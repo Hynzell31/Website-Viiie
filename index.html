@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelas VIIIE 2026</title>
+    <!-- Link CSS ke file style.css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Icon FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="logo">
+            <i class="fas fa-graduation-cap"></i> VIIIE 2026
+        </div>
+        <nav class="navbar">
+            <a href="#home" class="active">Beranda</a>
+            <a href="#about">Profil</a>
+            <a href="#structure">Pengurus</a>
+            <a href="#schedule">Jadwal</a>
+            <a href="#gallery">Galeri</a>
+        </nav>
+        <button class="btn-login" onclick="openLogin()">Login</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Selamat Datang di <span class="text-primary">Kelas VIIIE</span></h1>
+            <p>Angkatan 2026. Solidaritas tanpa batas, prestasi tanpa henti.</p>
+            <div class="hero-buttons">
+                <a href="#about" class="btn btn-primary">Tentang Kami</a>
+                <a href="#gallery" class="btn btn-secondary">Lihat Galeri</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <!-- GANTI NAMA FILE GAMBAR DI SINI -->
+            <img src="src/12.jpeg" alt="Ruangan Kelas" onerror="this.src='https://via.placeholder.com/600x400?text=Foto+Kelas+Hero'">
+        </div>
+    </section>
+
+    <!-- About & Wali Kelas -->
+    <section id="about" class="section">
+        <div class="section-header">
+            <h2>Profil Kelas</h2>
+            <div class="line"></div>
+        </div>
+        <div class="about-grid">
+            <div class="about-text">
+                <h3>Visi & Misi</h3>
+                <p>Kelas VIIIE berkomitmen untuk menjadi kelas yang unggul, disiplin, dan penuh kekeluargaan. Kami percaya setiap siswa memiliki potensi luar biasa.</p>
+                <ul style="list-style:none; margin-top:10px;">
+                    <li><i class="fas fa-check-circle"></i> Disiplin dan Tanggung Jawab</li>
+                    <li><i class="fas fa-check-circle"></i> Saling Menghargai</li>
+                </ul>
+            </div>
+            <div class="teacher-card">
+                <!-- GANTI NAMA FILE GAMBAR DI SINI -->
+                <img src="src/images.jpg" alt="Wali Kelas" onerror="this.src='https://via.placeholder.com/150?text=Wali+Kelas'">
+                <h3>Bapak Heri Setiawan S.Pd</h3>
+                <p>Wali Kelas VIIIE</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Structure -->
+    <section id="structure" class="section bg-light">
+        <div class="section-header">
+            <h2>Struktur Organisasi</h2>
+            <div class="line"></div>
+        </div>
+        <div class="org-grid">
+            <div class="org-card main">
+                <img src="src/images.jpg" alt="Ketua" onerror="this.src='https://via.placeholder.com/100?text=Ketua'">
+                <div class="info">
+                    <h3>Harjo</h3>
+                    <span>Ketua Kelas</span>
+                </div>
+            </div>
+            <div class="org-card">
+                <img src="src/images.jpg" alt="Wakil" onerror="this.src='https://via.placeholder.com/100?text=Wakil'">
+                <div class="info">
+                    <h3>Jessica</h3>
+                    <span>Wakil Ketua</span>
+                </div>
+            </div>
+            <div class="org-card">
+                <img src="src/images.jpg" alt="Sekretaris" onerror="this.src='https://via.placeholder.com/100?text=Sekre'">
+                <div class="info">
+                    <h3>Syafika/intan</h3>
+                    <span>Sekretaris</span>
+                </div>
+            </div>
+            <div class="org-card">
+                <img src="src/images.jpg" alt="Bendahara" onerror="this.src='https://via.placeholder.com/100?text=Benda'">
+                <div class="info">
+                    <h3>Daifa/Dzelvy</h3>
+                    <span>Bendahara</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JADWAL PELAJARAN -->
+    <section id="schedule" class="section">
+        <div class="section-header">
+            <h2>Jadwal Pelajaran</h2>
+            <div class="line"></div>
+        </div>
+        
+        <div class="schedule-tabs">
+            <button class="tab-btn active" onclick="openDay(event, 'Senin')">Senin</button>
+            <button class="tab-btn" onclick="openDay(event, 'Selasa')">Selasa</button>
+            <button class="tab-btn" onclick="openDay(event, 'Rabu')">Rabu</button>
+            <button class="tab-btn" onclick="openDay(event, 'Kamis')">Kamis</button>
+            <button class="tab-btn" onclick="openDay(event, 'Jumat')">Jumat</button>
+        </div>
+
+        <!-- SENIN -->
+        <div id="Senin" class="tab-content active">
+            <div class="schedule-item">
+                <span class="time">06:45 - 08:00</span>
+                <span class="subject">Upacara</span>
+                <span class="teacher">Lapangan</span>
+            </div>
+            <div class="schedule-item">
+                <span class="time">08:00 - 09:20</span>
+                <span class="subject">IPA</span>
+                <span class="teacher">Guru IPA</span>
+            </div>
+            <div class="schedule-item break">
+                <span class="time">09:20 - 09:40</span>
+                <span class="subject break">Istirahat</span>
+                <span class="teacher">-</span>
+            </div>
+            <div class="schedule-item">
+                <span class="time">09:40 - 11:00</span>
+                <span class="subject">Matematika</span>
+                <span class="teacher">Guru Mat</span>
+            </div>
+            <div class="schedule-item">
+                <span class="time">11:00 - 11:40</span>
+                <span class="subject">Seni Budaya</span>
+                <span class="teacher">Guru Senbud</span>
+            </div>
+            <div class="schedule-item break">
+                <span class="time">11:40 - 12:20</span>
+                <span class="subject break">Istirahat</span>
+                <span class="teacher">-</span>
+            </div>
+            <div class="schedule-item">
+                <span class="time">12:20 - 13:00</span>
+                <span class="subject">Seni Budaya</span>
+                <span class="teacher">Guru Senbud</span>
+            </div>
+            <div class="schedule-item">
+                <span class="time">13:00 - 13:40</span>
+                <span class="subject">Bahasa Inggris</span>
+                <span class="teacher">Guru B. Ing</span>
+            </div>
+            <div class="schedule-item">
+                <span class="time">13:40 - 14:20</span>
+                <span class="subject">BK</span>
+                <span class="teacher">Guru BK</span>
+            </div>
+        </div>
+        
+        <!-- SELASA -->
+        <div id="Selasa" class="tab-content">
+            <div class="schedule-item">
+                <span class="time">07:00 - 08:20</span>
+                <span class="subject">Informatika</span>
+                <span class="teacher">Guru TIK</span>
+            </div>
+            <div class="schedule-item">
+                <span class="time">08:20 - 09:40</span>
+                <span class="subject">PJO</span>
+                <span class="teacher">Guru PJO</span>
+            </div>
+            <div class="schedule-item break">
+                <span class="time">09:40 - 10:00</span>
+                <span class="subject break">Istirahat</span>
+                <span class="teacher">-</span>
+            </div>
+            <div class="schedule-item">
+                <span class="time">10:00 - 11:20</span>
+                <span class="subject">Bahasa Indonesia</span>
+                <span class="teacher">Guru B. Ind</span>
+            </div>
+            <div class="schedule-item">
+                <span class="time">11:20 - 12:00</span>
+                <span class="subject">IPS</span>
+                <span class="teacher">Guru IPS</span>
+            </div>
+            <div class="schedule-item break">
+                <span class="time">12:00 - 12:40</span>
+                <span class="subject break">Istirahat</span>
+                <span class="teacher">-</span>
+            </div>
+            <div class="schedule-item">
+                <span class="time">12:40 - 14:00</span>
+                <span class="subject">IPA</span>
+                <span class="teacher">Guru IPA</span>
+            </div>
+        </div>
+
+        <!-- RABU -->
+        <div id="Rabu" class="tab-content">
+            <div class="schedule-item">
+                <span class="time">07:00 - 08:20</span>
+                <span class="subject">Pendidikan Pancasila</span>
+                <span class="teacher">Guru PPkn</span>
+            </div>
+            <div class="schedule-item">
+                <span class="time">08:20 - 09:40</span>
+                <span class="subject">Matematika</span>
+                <span class="teacher">Guru Mat</span>
+            </div>
+            <div class="schedule-item highlight">
+                <span class="time">10:00 - 14:00</span>
+                <span class="subject">Kokurikuler</span>
+                <span class="teacher">Pembina Ekskul</span>
+            </div>
+        </div>
+
+        <!-- KAMIS -->
+        <div id="Kamis" class="tab-content">
+            <div class="schedule-item">
+                <span class="time">07:00 - 08:20</span>
+                <span class="subject">Bahasa Inggris</span>
+                <span class="teacher">Guru B. Ing</span>
+            </div>
+            <div class="schedule-item">
+                <span class="time">08:20 - 09:40</span>
+                <span class="subject">Agama</span>
+                <span class="teacher">Guru Agama</span>
+            </div>
+            <div class="schedule-item break">
+                <span class="time">09:40 - 10:00</span>
+                <span class="subject break">Istirahat</span>
+                <span class="teacher">-</span>
+            </div>
+            <div class="schedule-item">
+                <span class="time">10:00 - 11:20</span>
+                <span class="subject">IPS</span>
+                <span class="teacher">Guru IPS</span>
+            </div>
+            <div class="schedule-item">
+                <span class="time">11:20 - 12:00</span>
+                <span class="subject">Bahasa Indonesia</span>
+                <span class="teacher">Guru B. Ind</span>
+            </div>
+            <div class="schedule-item break">
+                <span class="time">12:00 - 12:40</span>
+                <span class="subject break">Istirahat</span>
+                <span class="teacher">-</span>
+            </div>
+            <div class="schedule-item">
+                <span class="time">12:40 - 13:20</span>
+                <span class="subject">Bahasa Indonesia</span>
+                <span class="teacher">Guru B. Ind</span>
+            </div>
+            <div class="schedule-item">
+                <span class="time">13:20 - 14:00</span>
+                <span class="subject">Bahasa Indonesia</span>
+                <span class="teacher">Guru B. Ind</span>
+            </div>
+        </div>
+        
+        <!-- JUMAT -->
+        <div id="Jumat" class="tab-content">
+            <div class="schedule-item" style="justify-content: center;">
+                <span class="subject break">Kegiatan mingguan / Kokulikuler</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="section bg-light">
+        <div class="section-header">
+            <h2>Galeri Kenangan</h2>
+            <div class="line"></div>
+        </div>
+        <div class="gallery-grid">
+            <!-- GANTI NAMA FILE GAMBAR DI SINI -->
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="src/12.jpeg" alt="Kenangan 1" onerror="this.src='https://via.placeholder.com/300x250?text=Foto+1'">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="src/123.jpeg" alt="Kenangan 2" onerror="this.src='https://via.placeholder.com/300x250?text=Foto+2'">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="src/1234.jpeg" alt="Kenangan 3" onerror="this.src='https://via.placeholder.com/300x250?text=Foto+3'">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="src/12345.jpeg" alt="Kenangan 4" onerror="this.src='https://via.placeholder.com/300x250?text=Foto+4'">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Kelas VIIIE 2026. All Rights Reserved.</p>
+    </footer>
+
+    <!-- MODALS -->
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLogin()">&times;</span>
+            <h2>Login Siswa</h2>
+            <form onsubmit="handleLogin(event)">
+                <input type="text" placeholder="NIS" style="width:100%; padding:10px; margin:10px 0;" required>
+                <input type="password" placeholder="Password" style="width:100%; padding:10px; margin:10px 0;" required>
+                <button type="submit" class="btn btn-primary" style="width:100%;">Masuk</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close-lightbox">&times;</span>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <!-- Link JS ke file script.js -->
+    <script src="script.js"></script>
+</body>
+</html>
